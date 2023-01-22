@@ -14,11 +14,12 @@ class Dispositivo {
         this.almacenamiento = a;
     }
 }
-class Celular {
+class Celular extends Dispositivo {
     camara;
     numero;
     memoria;
-    constructor(c, nu, me) {
+    constructor(c, nu, me, m, mo) {
+        super(c, nu, me, m, mo)
         this.camara = c;
         this.numero = nu;
         this.memoria = me;
@@ -53,4 +54,5 @@ class Pc extends Computadora {
     }
 }
 
-var d1 = new Pc(127, "madera", "rtx", "usb");
+var p1 = new Pc(127, "madera", "rtx", "usb");
+var c1 = new Celular("54mp", 5561685407, "34gb", "sanmsung", "xt56")
